@@ -112,9 +112,14 @@ select {
 
 textarea {
   width: 100%;
+<<<<<<< HEAD
   overflow-y: hidden;
   overflow-x: hidden;
   height:5em;
+=======
+  height: 5em;
+  overflow: hidden;
+>>>>>>> 3c22288ad69ba0cce64e65e6da2c3b7e62544cb7
 }
 
 .box {
@@ -144,4 +149,8 @@ textarea {
 
 .rounded:hover {
   background-color: #FF4081;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3c22288ad69ba0cce64e65e6da2c3b7e62544cb7
