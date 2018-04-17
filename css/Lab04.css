@@ -112,6 +112,9 @@ select {
 
 textarea {
   width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height:5em;
 }
 
 .box {

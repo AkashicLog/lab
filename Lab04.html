@@ -3,108 +3,130 @@
 <head >
    <meta charset="utf-8">
    <title>Lab 04</title>
-   <link rel="stylesheet" href="./css/reset.css" />
-   <link rel="stylesheet" href="./css/Lab04.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
-</header>
-<main>
-   <section>
-   <form method="post" action="http://www.randyconnolly.com/tests/process.php">
-       <fieldset>
-       <legend>
-           PHOTO DETAILS
-       </legend>
-        <table>
-            <tbody>
-            <tr>
-                <td colspan="2">
-                    Title<br>
-                    <input type="text" name="title" value="Give your photo a descrtptive name" title="name your photo">
-                    Descrtption<br>
-                    <textarea title="descrtption" name="descrtption"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Continent<br>
-                    <select title="Continent" name="Continent">
-                        <option value="Africa">Africa</option>
-                        <option value="Antarctica">Antarctica</option>
-                        <option value="Asia">Asia</option>
-                        <option value="None" selected="selected">Choose your Continent</option>
-                        <option value="Europe">Europe</option>
-                        <option value="North America">North America</option>
-                        <option value="South America">South America</option>
-                        <option value="Oceania">Oceania</option>
-                        <option value="None">None of your business</option>
-                    </select><br>
-                    Country<br>
-                    <select title="Country" name="Country">
-                        <option value="China">China</option>
-                        <option value="None" selected="selected">Choose your Country</option>
-                        <option value="Foreign country">Foreign country</option>
-                    </select><br>
-                    City<br>
-                    <input type="text" name="city" title="city">
-                </td>
-                <td>
-                    <p class="box">
-                        Copyright?<br>
-                        <label for="all right reserved">All right reserved</label>
-                        <input type="radio" name="right" id="all right reserved" value="all right reserved">
-                        <br>
-                        <label for="creative Commons">Creative Commons</label>
-                        <input type="radio" name="right" id="creative Commons" value="creative Commons">
-                    </p>
-                    <p class="box">
-                        Creative Commons Types<br>
-                        <input type="checkbox" name="CreativeCommonsTypes[0]" value="Attribution"> Attribution<br>
-                        <input type="checkbox" name="CreativeCommonsTypes[1]" value="Noncommercial"> Noncommercial<br>
-                        <input type="checkbox" name="CreativeCommonsTypes[2]" value="NoDerivativeWorks"> No Derivative Works<br>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" >
-                    <p class="rectangle">
-                        I accept the softwork license
-                        <input type="checkbox" name="aceept" value="accept">
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Rate this photo:<br>
-                    <input type="number" name="rateofphoto"><br>
-                    Color Collection:<br>
-                    <input type="color" name="color">
-                </td>
-                <td>
-                    Date Taken:<br>
-                    <input type="date" name="date"><br>
-                    Time Taken:<br>
-                    <input type="time" name="time">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p class="rectangle">
-                        <button type="submit"  formmethod="post"  class="rounded">提交</button>
-                        <button type="reset" class="rounded">Clear Form</button>
-                    </p>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-       </fieldset>
+   <header class="container">
+      <div class="row">
+          <div class="navbar-header">
+          <h1><strong>Share Your Travels</strong></h1>
+          <em>Let us konw where you had been</em>
+          </div>
+          <nav class="navbar navbar-default col-sm-5 col-md-6">
+              <div>
+                  <ul class="nav navbar-nav">
+                      <li><a href="./Lab02.html">Gallery</a></li>
+                      <li><a href="#">Related Photos</a></li>
+                      <li><a href="#">Reviews</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+   </header>
+   <section class="container table-bordered">
+   <form method="post" action="http://www.randyconnolly.com/tests/process.php" role="form">
+       <strong class="h2">PHOTO DETAILS</strong>
+       <div class="form-group">
+           <label for="titleOfPhoto">Title</label>
+           <input class="form-control" type="text" id="titleOfPhoto" name="title" placeholder="name your photo">
+       </div>
+       <div class="form-group">
+           <label for="descrtptionOfPhoto">Descrtption</label>
+           <textarea class="form-control" id="descrtptionOfPhoto" name="descrtption" rows="3" placeholder="Adding a rich description will help with search results"></textarea>
+       </div>
+       <div class="form-group">
+           <label for="continent">Continent</label>
+           <select class="form-control" id="Continent" title="Continent" name="continent">
+               <option value="Africa">Africa</option>
+               <option value="Antarctica">Antarctica</option>
+               <option value="Asia">Asia</option>
+               <option value="None" selected="selected">Choose your Continent</option>
+               <option value="Europe">Europe</option>
+               <option value="North America">North America</option>
+               <option value="South America">South America</option>
+               <option value="Oceania">Oceania</option>
+               <option value="None">None of your business</option>
+           </select>
+       </div>
+       <div class="form-group">
+           <label for="country">Country</label>
+           <select class="form-control" id="country" title="Country" name="country">
+               <option value="China">China</option>
+               <option value="None" selected="selected">Choose your Country</option>
+               <option value="Foreign country">Foreign country</option>
+           </select>
+       </div>
+       <div class="form-group">
+           <label for="city">City</label>
+           <input class="form-control" id="city" type="text" title="city" name="city">
+       </div>
+       <div class="form-group">
+       <div class="h5">Copyright?</div>
+       <div class="radio">
+           <label>
+               <input name="right" id="all right reserved" type="radio" value="all right reserved">
+               All right reserved
+           </label>
+       </div>
+       <div class="radio">
+           <label>
+               <input name="right" id="creative Commons" type="radio" value="creative Commons">
+               Creative Commons
+           </label>
+       </div>
+       </div>
+       <div class="form-group">
+           Creative Commons Types<br>
+           <label class="radio-inline">
+               <input type="checkbox" name="CreativeCommonsTypes[0]" value="Attribution">Attribution
+           </label>
+           <label class="radio-inline">
+               <input type="checkbox" name="CreativeCommonsTypes[1]" value="Noncommercial">Noncommercial
+           </label>
+           <label class="radio-inline">
+               <input type="checkbox" name="CreativeCommonsTypes[2]" value="NoDerivativeWorks"> No Derivative Works
+           </label>
+       </div>
+       <div class="form-group">
+           <label class="checkbox-inline">
+               <input type="checkbox" id="inlineCheckbox1" name="aceept" value="accept">
+               I accept the softwork license
+           </label>
+       </div>
+       <div class="form-group">
+           <div class="row">
+           <div class="col-xs-12  col-lg-5">
+               Rate this photo:<br>
+               <input class="form-control" type="number" name="rateofphoto">
+           </div>
+           <div class="col-xs-12 col-lg-6">
+               Color Collection:<br>
+               <input class="form-control" type="text" name="color">
+           </div>
+           </div>
+       </div>
+       <div class="form-group">
+           <div class="row">
+               <div class="col-xs-12 col-lg-4">
+                       Date Taken:
+                       <input class="form-control" type="text" name="date">
+               </div>
+               <div class="col-xs-12 col-lg-6">
+                       Time Taken:
+                       <input class="form-control" type="text" name="time">
+               </div>
+           </div>
+       </div>
+       <button  class="btn btn-sm btn-success" type="submit"  formmethod="post">提交</button>
+       <button  class="btn btn-sm btn-danger" type="reset" >Clear Form</button>
    </form>
    </section>
-</main>  
-
-
 </body>
 </html>

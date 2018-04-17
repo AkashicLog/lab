@@ -4,60 +4,46 @@
     <title>
         this is a test web page
     </title>
-    <style>
-     body{font-family:"Times New Roman", Times, sans-serif,serif; background-color: #E8EAF6 ;padding-left: 5% ;padding-right:5%; }
-     header{background-color: #1A237E; padding: 1em 0 1em 1em ; }
-     nav{background-color:#3F51B5;padding: 0.3em 0 0.3em 1em;margin-bottom:0.5em; }
-     article{background-color: white; padding: 0.5em;margin: 0.5em 0 0.5em 0;}
-     article section {border: thin solid #C5CAE9;padding: 0;}
-     article section h3{background-color: #7986CB;padding: 1em 0 1em 1em;margin: 0}
-     footer{background-color: #1A237E; color:white;padding: 1.3em 0 1.3em 1em;line-height:1.6em;}
-     article section p {margin: 0.5em 1em 1em 1em;  text-align: justify;}
-     #another {background-color:#C5CAE9;color:#7990a3;padding: 0.5em 1em;}
-     #comment_icon{padding: 0 1em 0.5em 0;text-align:right;}
-     #landscape_img{display:block;}
-     .deletegap{margin:0; padding:0;}
-     .headinggap{padding: 0.3em }
-     .minwidth{min-width:600px;}
-     .headingcolor{background-color: #7986CB;color: #7986CB;}
-     .sectiongasp{margin-top:0.5em;}
-     .commenter{padding-top:0.5em; padding-left: 1em;padding-right: 1em;}
-     .comment{padding-top: 0.5em;padding-bottom: 0.5em;}
-     .heading{color:white;}
-     .base{color:#C5CAE9;}
-     .links{color:#00B0FF;}
-     .date{color: #F6A2C1}
-     .headlinks:hover{color: white; background-color: #F50057;}
-    </style>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<header class="minwidth">
-    <h1 class="heading"><strong>Share Your Travels</strong></h1>
-    <em class="heading">Let us konw where you had been</em>
+<header class="container">
+    <div class="row">
+        <div class="navbar-header">
+            <h1><strong>Share Your Travels</strong></h1>
+            <em>Let us konw where you had been</em>
+         </div>
+        <nav class="navbar navbar-default col-sm-5 col-md-6">
+            <div>
+            <ul class="nav navbar-nav">
+                <li><a href="./Lab04.html">Upload</a></li>
+                <li><a href="#">Related Photos</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+            </div>
+        </nav>
+    </div>
 </header>
-<nav class="minwidth">
-    <table>
-        <tr>
-            <td><a href="#" class="links headlinks headinggap">Description</a></td>
-            <td><a href="#" class="links headlinks headinggap">Related Photo</a></td>
-            <td><a href="#" class="links headlinks headinggap">Reviews</a></td>
-        <tr>
-    </table>
-</nav>
 
-<article class="minwidth">
-    <section>
-        <div class="headingcolor"><h3 ><strong class="heading" >New York City - Central Park</strong></h3></div>
-            <img id="landscape_img" class="deletegap" src="images/central-park.jpg"  alt="your photo"
-                  width="100%" height="100%" >
-        <div id="another"><em >Consevatory Pond in Central Park</em></div>
+<article class="container">
+    <div class="row bottom top">
+    <section class="col-xs-12 col-sm-9 col-md-9 text-left table-bordered">
+        <div class="h3"><strong>New York City - Central Park</strong><br><small>Consevatory Pond in Central Park</small></div>
+        <a href="./images/large-central-park.jpg"><img id="landscape_img" class="deletegap" src="images/central-park.jpg"  alt="your photo"></a>
         <p>
             This photo of Consevatory Pond in <a href="#" class="links"><strong>Central Park</strong></a> in <a href="#" class="links"><strong>
-            New York City</strong></a>was taken on October 22,2016 with Canon EOC 30D camera.<br>
+            New York City</strong></a> was taken on October 22,2016 with Canon EOC 30D camera.<br>
         </p>
-        <div id="comment_icon">
+        <div id="comment_icon" class="text-right">
         <img id="icon_download_img" src="images/icon_download.png" alt="download">
             <img id="icon_mail_img" src="images/icon_mail.png" alt="sending a mail">
             <img id="icon_map_img" src="images/icon_map.png" alt="to get the position">
@@ -66,34 +52,75 @@
         </div>
     </section>
 
-    <section class="sectiongasp">
-        <div class="headingcolor"><h3 ><strong class="heading">Related Photo</strong></h3></div>
-            <img id="related_landscape1_img" class="deletegap" src="images/related-square1.jpg" alt="your frist photo"
-                 width="150" height="150">&nbsp;
-            <img id="related_landscape2_img" class="deletegap" src="images/related-square2.jpg" alt="your second photo"
-                 width="150" height="150">&nbsp;
-            <img id="related_landscape3_img" class="deletegap" src="images/related-square3.jpg" alt="your third photo"
-                 width="150" height="150"><br>
+    <div class="col-xs-12 col-sm-3 col-md-3">
+    <section class="table-bordered text-center">
+        <div><h3 ><strong>Related Photo</strong></h3></div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="./images/related-large1.jpg"><img class="img-responsive center-block" src="./images/related-square1.jpg" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="./images/related-large2.jpg"><img class="img-responsive center-block" src="./images/related-square2.jpg" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="./images/related-large3.jpg"><img class="img-responsive center-block" src="./images/related-square3.jpg" alt="..."></a>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     </section>
 
-   <section class="sectiongasp">
-        <div class="headingcolor"><h3 ><strong class="heading">Reviews</strong></h3></div>
-        <div class="commenter"><small class="base">By Ricardo on</small> <small><em class="date">2016-05-23</em></small><br>
-        <small class="comment">Easy on the HDR buddy.</small>
-        <hr>
+   <section class="table-bordered">
+        <div class="text-center">
+            <h3><strong>Reviews</strong></h3>
+            <em><strong>Ricardo</strong></em><br>
+            <button type="button" class="btn btn-xs btn-info" data-toggle="collapse" data-target="#demo1">
+                2016-05-23
+            </button>
+            <div id="demo1" class="collapse">
+                Easy on the HDR buddy.
+            </div>
+            <hr>
+            <em><strong>Susan</strong></em><br>
+            <button type="button" class="btn btn-xs btn-info" data-toggle="collapse" data-target="#demo2">
+                2016-11-18
+            </button>
+            <div id="demo2" class="collapse">
+                I love Central Park.
+            </div>
         </div>
-        <div class="commenter"><small class="base">By Susan on</small> <small><em class="date">2016-11-18</em></small><br>
-        <small class="comment">I love Central Park.</small>
         <hr>
-        </div>
    </section>
-
+    </div>
+    </div>
 </article>
-<footer class="minwidth">
-    <a href="#" class="links">Home</a>&nbsp;|&nbsp;<a href="#" class="links">Browse</a>&nbsp;|&nbsp;<a href="#" class="links">Search</a><br>
-    <em class="heading">Copyright&copy;2017 Share Your Travels</em>
+<footer class="container">
+    <div class="row">
+        <a class="col-xs-12 col-ms-5 col-md-5 text-right" href="#">Home</a>
+        <a class="col-xs-12 col-ms-1 col-md-1 text-right" href="#">Browse</a>
+        <a class="col-xs-12 col-ms-1 col-md-1 text-right" href="#">Search</a>
+    </div>
+    <div class="row">
+        <em class="col-xs-12 col-ms-12 col-md-12 text-center ">Copyright&copy;2017 Share Your Travels</em>
+    </div>
 </footer>
-
-
 </body>
 </html>
