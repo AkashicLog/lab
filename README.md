@@ -1,3 +1,3 @@
 ## lab
-#a stupid html for lab6 
+a stupid html for lab6 
 by 17302010047
