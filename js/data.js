@@ -38,6 +38,7 @@ window.onload =function fakeContent() {
             let photosrc = "./images/"+countries[i].photos[k];
             let temporaryphoto= document.createElement("img");
             temporaryphoto.src= photosrc;
+            temporaryphoto.className ="photo";
             p2_element.appendChild(temporaryphoto);
         }
         p2_element.appendChild(button);
