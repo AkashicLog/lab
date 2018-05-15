@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab07</title>
+    <style type="text/css">
+        body> form{
+            text-align: center;
+        }
+        header{
+            background-color: darkblue;
+            color: white;
+        }
+        div table {
+            margin: 0 auto;
+        }
+        div td {
+            padding: 0 0.5em;
+        }
+        .formlabel{
+            width: 300px;
+        }
+        #commit{
+            position: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>lab07</h1>
+</header>
+<form>
+    <select class="formlabel" id="select_one" title="">
+        <option value="SELECT ONE">SELECT ONE</option>
+        <option value="CREATE TABLE">CREATE TABLE</option>
+        <option value="ADD ROW">ADD ROW</option>
+        <option value="DELETE ROW">DELETE ROW </option>
+        <option value="DELETE TABLE">DELETE TABLE</option>
+    </select>
+    <div id="hidden_input">
+    </div>
+    <div id="hidden_input2">
+    </div>
+    <button class="formlabel" id="commit" onclick="return commit2()">submit</button><br>
+    <select class="formlabel" id="select_two" title="">
+        <option value="DEFAULT">DEFAULT</option>
+    </select>
+    <div id="hidden_form">
+    </div>
+</form>
+<script src="js/lab07.js"></script>
+</body>
+</html>
