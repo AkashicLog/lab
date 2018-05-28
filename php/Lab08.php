@@ -1,4 +1,4 @@
-
+<?php include 'functions.inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +33,6 @@
 
                 <!-- start post summaries -->
                 <div class="postlist">
-                    <?php include 'functions.inc.php'; ?>
                     <!-- replace each of these rows with a function call -->
                     <?php             
                     outputPostRow(1); 
